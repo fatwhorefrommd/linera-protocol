@@ -1503,6 +1503,10 @@ struct ClientOptions {
     /// Subcommand.
     #[command(subcommand)]
     command: ClientCommand,
+
+    /// The replication factor for the keyspace
+    #[arg(long, default_value = "1")]
+    storage_replication_factor: u32,
 }
 
 impl ClientOptions {
@@ -1520,6 +1524,7 @@ impl ClientOptions {
             max_concurrent_queries: self.max_concurrent_queries,
             max_stream_queries: self.max_stream_queries,
             storage_cache_config,
+            replication_factor: self.storage_replication_factor,
         }
     }
 
