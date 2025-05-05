@@ -12,6 +12,9 @@
     - `rustup target add wasm32-unknown-unknown`
 * Clang/LLVM
     - `brew install llvm@18` then make sure to update your `PATH` as instructed.
+    - export PATH="/opt/homebrew/opt/llvm@18/bin:$PATH"
+    - export LDFLAGS="-L/opt/homebrew/opt/llvm@18/lib"
+    - export CPPFLAGS="-I/opt/homebrew/opt/llvm@18/include"
 * Protoc
     - `brew install protobuf`
 
