@@ -28,7 +28,6 @@ services:
 
   shard:
     image: "${LINERA_IMAGE:-linera}"
-    deploy:
       replicas: 4
     command: [ "./compose-server-entrypoint.sh" ]
     volumes:
