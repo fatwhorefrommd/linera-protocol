@@ -48,8 +48,7 @@ spec:
               exit 1
             fi
 
-            seen_arrays=(/dev/md/*)
-            device=${seen_arrays[0]}
+            raid_device="/dev/md0"
             echo "Setting RAID array with Local SSDs on device ${device}"
             if [ ! -e "$device" ]; then
               device="/dev/md/0"
