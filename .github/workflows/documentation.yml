@@ -56,7 +56,7 @@ jobs:
         publish_dir: ./target/doc
         force_orphan: true
 
-  test-crates-and-docrs:
+  test-crates-and-docsrs:
     runs-on: ubuntu-latest
     timeout-minutes: 90
 
